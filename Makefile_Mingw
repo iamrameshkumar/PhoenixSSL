@@ -1,20 +1,20 @@
-SRCS = sslscan.c
+SRCS = main.c
 BINPATH = /usr/bin/
 INCLUDE = -I/<your mingw dir here>/Mingw/mingw32/opt/include/ -I/<your mingw dir here>/Mingw/mingw32/i686-w64-mingw32/include/
 LIB = -L/<your mingw dir here>/Mingw/mingw32/opt/lib -L/<your mingw dir here>/Mingw/mingw32/i686-w64-mingw32/lib
 	
-all:sslscan.o
-	gcc -o sslscan sslscan.o -lssl -lcrypto -lgcc_s -lws2_32 $(LIB)
+all:phoenixSSL.o
+	gcc -o phoenixSSL phoenixSSL.o -lssl -lcrypto -lgcc_s -lws2_32 $(LIB)
 
-sslscan.o:
+phoenixSSL.o:
 	gcc -g -c -Wall  $(SRCS) $(INCLUDE)
 
 install:
-	cp sslscan $(BINPATH)
+	cp phoenixSSL $(BINPATH)
 
 uninstall:
-	rm -f $(BINPATH)sslscan
+	rm -f $(BINPATH)phoenixSSL
 
 clean:
-	rm -f sslscan
-	rm -f sslscan.o
+	rm -f phoenixSSL
+	rm -f phoenixSSL.o
