@@ -1,12 +1,12 @@
 #Makefile for Linux and Cygwin
-SRCS = sslscan.c
+SRCS = main.c
 	
-all:sslscan.o
-	gcc -o sslscan sslscan.o -lssl -lcrypto
+all:phoenixSSL.o
+	gcc -o phoenixSSL phoenixSSL.o -lssl -lcrypto
 
-sslscan.o:
+phoenixSSL.o:
 	gcc -g -c -Wall  $(SRCS)
 
 clean:
-	rm -f sslscan
-	rm -f sslscan.o
+	rm -f phoenixSSL
+	rm -f phoenixSSL.o
