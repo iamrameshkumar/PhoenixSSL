@@ -1,3 +1,4 @@
+#Makefile for Linux and Cygwin
 SRCS = sslscan.c
 	
 all:sslscan.o
