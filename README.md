@@ -1,2 +1,2 @@
 # PhoenixSSL
-Software for hacking the TLS
+Software for checking SSL vulnerabilities in servers
